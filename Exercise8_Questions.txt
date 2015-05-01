@@ -1,0 +1,25 @@
+"""
+Created on Fri May  1 09:35:58 2015
+
+@author: vallmerjordan
+"""
+"""
+Play around with different settings for the analyses outlined above and try to 
+answer these questions:
+(1) How do trace plots differ if we record samples from every generation or if 
+we space out our sampling?
+
+If samples are recorded every generation, the parameter values vary quite a bit around the mean. 
+The result is a fuzzy caterpillar. On the other hand, as we space out our samples, it becomes smooth (less variation around the mean).
+
+(2) How does the width of the 95% credible interval change as we add/subtract data?
+
+When adding data, the confidence interval begins to approximate the true value of p.
+When subtracting data, the confidence interval begins to deviate from the true value of p.
+
+(3) How does the trace plot change if the proposal window becomes much bigger 
+or smaller for a given amount of data?
+
+As the size of the proposal window increases, the chain spends longer periods in one parameter value before changing. The result 
+is a trace plot resembling the "Manhattan skyline". If the size of the proposal window is decreased, the trace plot
+flattens out substantially. The variation in sampled parameters decreases. 
